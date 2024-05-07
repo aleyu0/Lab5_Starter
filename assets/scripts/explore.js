@@ -43,11 +43,11 @@ function speakText() {
 
       faceImage.src = 'assets/images/smiling-open.png';
 
+      // return to smiling face when speech ends
       utterance.onend = () => {
         faceImage.src = 'assets/images/smiling.png';
       };
 
-      // Speak the text
       speechSynthesis.speak(utterance);
 
     } else {
@@ -56,5 +56,4 @@ function speakText() {
   } else {
     console.error('SpeechSynthesis not supported or voice not selected');
   }
-  // faceImage.src = 'assets/images/smiling.png';
 }
